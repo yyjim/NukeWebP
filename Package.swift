@@ -20,19 +20,18 @@ let package = Package(
             targets: ["NukeWebPBasic"]),
         .library(
             name: "NukeWebPAdvanced",
-            targets: ["NukeWebPAdvanced"]),
-        
+            targets: ["NukeWebPAdvanced"])
     ],
     dependencies: [
         .package(url: "https://github.com/kean/Nuke.git", from: "10.9.0"),
-        .package(url: "https://github.com/SDWebImage/libwebp-Xcode", from: "1.2.1"),
+        .package(url: "https://github.com/SDWebImage/libwebp-Xcode", from: "1.2.1")
     ],
     targets: [
         .target(
             name: "NukeWebP",
             dependencies: [
                 .product(name: "Nuke", package: "Nuke"),
-                .product(name: "libwebp", package: "libwebp-Xcode"),
+                .product(name: "libwebp", package: "libwebp-Xcode")
             ]),
         .target(
             name: "NukeWebPBasic",
@@ -49,7 +48,7 @@ let package = Package(
             dependencies: [
                 .target(name: "NukeWebP"),
                 .target(name: "NukeWebPBasic"),
-                .target(name: "NukeWebPAdvanced"),
-            ]),
+                .target(name: "NukeWebPAdvanced")
+            ])
     ]
 )
